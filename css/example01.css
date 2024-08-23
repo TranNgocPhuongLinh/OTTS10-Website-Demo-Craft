@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* .container-fluid{
+    margin: 0;
+    padding: 0 10px;
+} */
+
+header{
+    margin: 0;
+    padding: 0;
+}
+
+#main-content{
+    height: max-content;
+    /* max-height: 800px; */
+}
+#sidebar-container{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#content{
+    /* position: relative; */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: auto; */
+}
+
+#content section{
+    height: 100px;
+    border: 1.5px solid black;
+}
+
+#footer{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.hide-content {
+    display: none;
+}
+
+#loading{
+    height: 600px;
+}

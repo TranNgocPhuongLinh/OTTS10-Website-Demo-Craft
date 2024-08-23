@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#carousel{
+    width: 60%;
+    height: 100%;
+    margin: 0 auto 10 auto;
+    float: left;
+}
+
+.carousel button{
+    width: 50px;
+}
+
+.carousel button:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+
+.carousel-inner {
+    margin-top: 20px;
+    height: 300px;
+    padding-bottom: 25%; /* this sets carousel aspect ratio (4:1 here) */
+}
+
+#carousel .carousel-indicators{
+    max-width: 100%;
+    width: calc(100% - 50px - 50px);
+    background-color: rgba(0,0,0,0.4);
+    left: 0;
+    margin: 0 0 0 50px;
+}
+  
+.carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  
+.carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+#carousel .carousel-item .carousel-caption.d-none.d-md-block{
+    max-width: 100%;
+    width: calc(100% - 50px - 50px);
+    text-align: left;
+    background-color: rgba(0,0,0,0.4);
+    left: 0;
+    margin: 0 0 0 50px;
+    height: 40px;
+    z-index: 3;
+}
+
+.carousel-item .carousel-caption a{
+    text-decoration: none;
+    color: white;
+}
+
+.carousel-item .carousel-caption a h5{
+    padding-left: 10px;
+}
+
+#sub-news{
+    border: 1px solid black;
+    margin: 20px 10px 20px 0;
+    padding: 0;
+    overflow: auto;
+    max-height: 300px;
+}
+
+#sub-news .sub-news-header{
+    background-color: lightgrey;
+    text-align: center;
+    height: 30px;
+}
+
+#sub-news .sub-news-item {
+    border-top: 1px solid black;
+    margin: auto 0;
+    padding: 0;
+    height: 45px;
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
+  }
+  
+  #sub-news .sub-news-item a {
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    height: 50px;
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
+  }
+  
+  #sub-news .sub-news-item a h6 {
+    margin: 0; /* Remove auto 0 */
+  }
+
+
+
+#sub-content{
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+}
+
+.content-box{
+    border: 1px solid black;
+    margin: 0 0 10px 25px;
+    padding: 0;
+    overflow: auto;
+    max-height: 300px;
+    text-align: center;
+}
+
+/* #grammar{
+    width: 400px;
+    border: 1px solid black;
+    margin: 0 0 10px 52px;
+    padding: 0;
+    overflow: auto;
+    max-height: 300px;
+    text-align: center;
+} */
+
+.sub-content-header{
+    background-color: lightgray;
+    padding: 0;
+}
+
+.sub-news-item {
+    border-top: 1px solid black;
+    margin: auto 0;
+    padding: 0;
+    height: 45px;
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
+  }
+  
+.sub-news-item a {
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    height: 50px;
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
+  }
+  
+.sub-news-item a h6 {
+    margin: 0; /* Remove auto 0 */
+  }
+
+/* #exercises{
+    width: 400px;
+    border: 1px solid black;
+    margin: 0 0 10px 25px;
+    padding: 0;
+    overflow: auto;
+    max-height: 300px;
+    text-align: center;
+}
+
+#references{
+    width: 400px;
+    border: 1px solid black;
+    margin: 0 0 10px 25px;
+    padding: 0;
+    overflow: auto;
+    max-height: 300px;
+    text-align: center;
+} */
+
+.sub-news-item a h6:hover{
+    color: blue;
+    transform: translateY(-2px);
+    transition: transform 0.3ms;
+}
+
+#english, #maths, #literature, #exercises, #references{
+    width: 400px;
+    padding: 0;
+}
