@@ -66,7 +66,7 @@ body{
 
 #sub-news{
     border: 1px solid black;
-    margin: 20px 10px 20px 0;
+    margin: 20px 10px;
     padding: 0;
     overflow: auto;
     max-height: 300px;
@@ -186,3 +186,51 @@ body{
     width: 400px;
     padding: 0;
 }
+
+#english, #exercises{
+    margin: 0 0 10px 55px;
+}
+
+@media (min-width: 992px){
+    #english, #maths, #literature{
+        margin: 0 auto 10px auto;
+        
+    }
+    #exercises, #references{
+        margin: 0 25px 10px 25px;
+    }
+}
+
+  @media (min-width: 768px) and (max-width: 992px){
+    #english, #maths, #literature, #exercises, #references{
+        margin: 0 auto 10px auto;
+        
+    }  
+    #sub-news{
+        margin: 20px auto;
+        width: 95%;
+    }      
+
+  }
+
+  @media (min-width: 576px) and (max-width: 768px){
+    #english, #maths, #literature, #exercises, #references{
+        margin: 0 auto 10px auto;
+        
+    }
+    #sub-news{
+        margin: 20px auto;
+        width: 95%;
+    }  
+  }
+
+  @media (max-width: 576px) {
+    #english, #maths, #literature, #exercises, #references{
+        margin: 0 auto 10px auto;
+        
+    }
+    #sub-news{
+        margin: 20px auto;
+        width: 95%;
+    }  
+  }

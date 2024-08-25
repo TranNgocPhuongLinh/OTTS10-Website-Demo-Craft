@@ -10,6 +10,11 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 
+.wrapper .tab .buttons{
+  position: absolute;
+  left: 40%;
+}
+
 /* Style the tab */
 .tab {
     overflow: hidden;
@@ -71,6 +76,33 @@ body{
  .list-item:hover{
   cursor: default;
  }
+
+ @media (min-width: 992px){
+    
+ }
+ 
+   @media (min-width: 768px) and (max-width: 992px){
+    .wrapper .tab .buttons{
+      position: absolute;
+      left: 40%;
+    }
+ 
+   }
+ 
+   @media (min-width: 576px) and (max-width: 768px){
+    .wrapper .tab .buttons{
+      position: absolute;
+      left: 35%;
+    }
+   }
+ 
+   @media (max-width: 576px) {
+    .wrapper .tab .buttons{
+      position: absolute;
+      left: 30%;
+    }
+   }
+ 
 
 
 

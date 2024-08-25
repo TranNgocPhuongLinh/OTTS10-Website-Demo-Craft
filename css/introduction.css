@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    cursor: default;
 }
 
 #introduction{
@@ -17,3 +18,28 @@ body{
     border: 1px solid black;
 }
 
+@media (min-width: 992px){
+    
+}
+
+  @media (min-width: 768px) and (max-width: 992px){
+        #introduction, #aim{
+            width: 90%;
+            font-size: 90%;
+        }
+
+  }
+
+  @media (min-width: 576px) and (max-width: 768px){
+    #introduction, #aim{
+        width: 90%;
+        font-size: 90%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    #introduction, #aim{
+        width: 90%;
+        font-size: 90%;
+    }
+  }
