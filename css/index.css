@@ -209,7 +209,13 @@ body{
     #sub-news{
         margin: 20px auto;
         width: 95%;
-    }      
+    }   
+    #carousel{
+        margin-top: 60px;
+    }   
+    #carousel.carousel-collapsed{
+        margin-top: 10px;
+    }
 
   }
 

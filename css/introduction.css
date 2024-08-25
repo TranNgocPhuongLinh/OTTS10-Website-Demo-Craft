@@ -18,16 +18,24 @@ body{
     border: 1px solid black;
 }
 
+
+
 @media (min-width: 992px){
-    
+   
 }
 
   @media (min-width: 768px) and (max-width: 992px){
+        #introduction{
+            margin-top: 60px;
+        }
         #introduction, #aim{
             width: 90%;
             font-size: 90%;
         }
 
+        #introduction.introduction-collapsed {
+            margin-top: 20px; /* or any other value you want */
+          }
   }
 
   @media (min-width: 576px) and (max-width: 768px){

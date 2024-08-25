@@ -126,10 +126,20 @@ body{
     color: black;
 }
 
+/* #content.content-expanded{
+    height: calc(100%-10%);
+} */
+
 
   @media (min-width: 992px){
     #head .navbar-toggler{
         display: none !important;
+    }
+    #head a.navbar-brand{
+        margin: 0 auto;
+    }
+    #head ul.nav{
+        margin: 0 auto;
     }
   }
 

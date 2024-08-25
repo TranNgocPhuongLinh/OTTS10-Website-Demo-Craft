@@ -39,6 +39,13 @@ body{
             margin: 0 auto;
         }
 
+        #news{
+            margin-top: 60px;
+        }
+        #news.news-collapsed{
+            margin-top: 10px;
+        }
+
   }
 
   @media (min-width: 576px) and (max-width: 768px){
