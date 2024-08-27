@@ -18,3 +18,7 @@ body{
 #main-news p{
     font-size: 18px;
 }
+
+#main-news iframe{
+    margin: 10px;
+}

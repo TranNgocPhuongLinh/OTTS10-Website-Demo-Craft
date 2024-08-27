@@ -1,0 +1,86 @@
+#content .row{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+#table-of-content{
+    border: 1px solid black;
+    margin: 20px auto;
+    padding: 0;
+    font-size: 120%;
+    width: 30%;
+    display: fixed;
+}
+
+#table-of-content #main-title h5{
+    padding-left: 10px;
+}
+
+#table-of-content #toggle-button{
+    display: flex; justify-content:flex-end;
+}
+
+#table-of-content #toggle-button button{
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    border: none;
+}
+
+#table-of-content ol li.title{
+    cursor: default;
+}
+
+#table-of-content ol li ol li a{
+    text-decoration: none;
+    color: black;
+}
+
+#table-of-content ol li ol li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+#table-of-content ol li ol li a.continuous{
+    pointer-events: none;
+}
+
+#table-of-content ol li ol li a.perfect{
+    pointer-events: none;
+}
+
+#table-of-content ol li ol li a.perfect-continuous{
+    pointer-events: none;
+}
+
+.list-collapsed{
+    display: none;
+}
+
+
+#main-view{
+    margin: 20px 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+#main-view h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+#main-view section{
+    padding-left: 15px;
+    font-size: 150%;
+}
+
+#main-view section .structures{
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid black;
+    width: 45%;
+}
+
+#main-view section .structures .table-title{
+    text-align: center;
+}
