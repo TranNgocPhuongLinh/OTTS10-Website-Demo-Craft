@@ -96,14 +96,14 @@
             $('#loading').load('../html/loading.html')
 
             $(document).ajaxStart(function() {
-                $("#content").addClass("hide-content");
+                document.getElementById("content").style.display = "none";
                 $("#loading").show();
             });
 
             $(document).ajaxComplete(function() {
                 setTimeout(function() {
                     $("#loading").hide();
-                    $("#content").removeClass("hide-content");
+                    document.getElementById("content").style.display = "block";
                 }, 2000);
             });
 
@@ -112,5 +112,19 @@
                 $("#loading").show();
             });
         });
+
+        // document.onreadystatechange = function () {
+        //     if (document.readyState !== "complete") {
+        //         document.querySelector(
+        //             "#content").style.visibility = "hidden";
+        //         document.querySelector(
+        //             "#loading").style.visibility = "visible";
+        //     } else {
+        //         document.querySelector(
+        //             "#loading").style.display = "none";
+        //         document.querySelector(
+        //             "#content").style.visibility = "visible";
+        //     }
+        // };
    </script>
 </html>

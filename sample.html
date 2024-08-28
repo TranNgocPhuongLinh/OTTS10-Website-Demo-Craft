@@ -42,14 +42,14 @@
             $('#loading').load('../html/loading.html')
 
             $(document).ajaxStart(function() {
-                $("#content").addClass("hide-content");
+                document.getElementById("content").style.display = "none";
                 $("#loading").show();
             });
 
             $(document).ajaxComplete(function() {
                 setTimeout(function() {
                     $("#loading").hide();
-                    $("#content").removeClass("hide-content");
+                    document.getElementById("content").style.display = "block";
                 }, 2000);
             });
 

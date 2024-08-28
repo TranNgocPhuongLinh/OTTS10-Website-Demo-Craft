@@ -27,6 +27,7 @@ header{
     height: 100%;
     margin: 0;
     padding: 0;
+    display: none;
     /* overflow: auto; */
 }
 
@@ -56,9 +57,9 @@ header{
     transform: translateX(-5px);
 }
 
-.hide-content {
+/* .hide-content {
     display: none;
-}
+} */
 
 #loading{
     height: 600px;
