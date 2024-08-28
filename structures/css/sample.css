@@ -1,3 +1,18 @@
+#return{
+    margin-top: 20px; margin-left: 10px;
+}
+
+#return a i{
+    color: black;
+    font-size: 27px;
+    width: 30px;
+}
+
+#return a i:hover{
+    transition: transform 0.25s;
+    transform: translateX(-5px);
+}
+
 #content .row{
     font-family: 'Times New Roman', Times, serif;
 }
@@ -6,14 +21,18 @@
 #table-of-content{
     border: 1px solid black;
     margin: 20px auto;
-    padding: 0;
+    height: fit-content;
+    padding: 0; padding-top: 10px;
     font-size: 120%;
     width: 30%;
-    display: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 #table-of-content #main-title h5{
     padding-left: 10px;
+    font-weight: bold;
 }
 
 #table-of-content #toggle-button{

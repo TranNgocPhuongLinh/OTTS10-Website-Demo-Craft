@@ -41,6 +41,21 @@ header{
     padding: 0;
 }
 
+#return{
+    margin-top: 20px; margin-left: 10px;
+}
+
+#return a i{
+    color: black;
+    font-size: 27px;
+    width: 30px;
+}
+
+#return a i:hover{
+    transition: transform 0.25s;
+    transform: translateX(-5px);
+}
+
 .hide-content {
     display: none;
 }

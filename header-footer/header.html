@@ -34,17 +34,22 @@
                   </button>
                   <ul class="nav d-flex ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../html/trangchu.html"> 
-                      <i class="fa-solid fa-home" aria-hidden="true"></i><span> Trang chủ</span></a>
+                      <a class="nav-link" aria-current="page" href="../html/trangchu.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Trang chủ"> 
+                      <i class="fa-solid fa-home" aria-hidden="true"></i>
+                      <span> Trang chủ</span>
+                    </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../html/introduction.html"> <i class="fa-solid fa-circle-info"></i><span> Giới thiệu</span></a>
+                      <a class="nav-link" href="../html/introduction.html"
+                      data-bs-toggle="tooltip" data-bs-placement="bottom" title="Giới thiệu"> <i class="fa-solid fa-circle-info"></i><span> Giới thiệu</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../news/news.html"> <i class="fa-solid fa-newspaper" aria-hidden="true"></i><span> Tin tức</span></a>
+                      <a class="nav-link" href="../news/news.html"
+                      data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tin tức"> <i class="fa-solid fa-newspaper" aria-hidden="true"></i><span> Tin tức</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../subjects/english.html"> <i class="fa-solid fa-globe"></i><span> Tiếng Anh</span></a>
+                      <a class="nav-link" href="../subjects/english.html"
+                      data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tiếng Anh"> <i class="fa-solid fa-globe"></i><span> Tiếng Anh</span></a>
 
                       <!-- <div class="dropdown">
                         <a class="nav-link" href="../subjects/english.html" id="dropdown-nav">
@@ -60,13 +65,16 @@
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="#"> <i class="fa-solid fa-book"></i><span> Ngữ Văn</span></a>
+                      <a class="nav-link" href="#"
+                      data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ngữ Văn"> <i class="fa-solid fa-book"></i><span> Ngữ Văn</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#"> <i class="fa-solid fa-calculator" aria-hidden="true"></i><span> Toán học</span></a>
+                      <a class="nav-link" href="#"
+                      data-bs-toggle="tooltip" data-bs-placement="bottom" title="Toán Học"> <i class="fa-solid fa-calculator" aria-hidden="true"></i><span> Toán Học</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../entertainment/entertainment.html"> <i class="fa-solid fa-dice"></i> <span>Giải trí</span></a>
+                      <a class="nav-link" href="../entertainment/entertainment.html"
+                      data-bs-toggle="tooltip" data-bs-placement="bottom" title="Giải trí"> <i class="fa-solid fa-dice"></i> <span>Giải trí</span></a>
                     </li>
                     <button class="btn btn-toggle" id="toggle-header">
                       <i class="fa fa-angle-double-up" aria-hidden="true"></i>
@@ -129,11 +137,22 @@
                 $('#news').toggleClass('news-collapsed');
                 $(this).find('i').toggleClass('fa-angle-double-up fa-angle-double-down');
 
+                // if ($('#head').hasClass('header-collapsed')) {
+                //   $('#dropdown-nav i:first-child').addClass('dropdown-toggle');
+                // } else {
+                //   $('#dropdown-nav i:first-child').removeClass('dropdown-toggle');
+                // }
+
+                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
                 if ($('#head').hasClass('header-collapsed')) {
-                  $('#dropdown-nav i:first-child').addClass('dropdown-toggle');
+                    $('[data-bs-toggle="tooltip"]').tooltip();
                 } else {
-                  $('#dropdown-nav i:first-child').removeClass('dropdown-toggle');
+                    $('[data-bs-toggle="tooltip"]').tooltip('dispose');
                 }
+
+                
 
                 // if ($('#content').hasClass('expanded')) {
                 //   $('#content').animate({ height: 0 }, 500);
