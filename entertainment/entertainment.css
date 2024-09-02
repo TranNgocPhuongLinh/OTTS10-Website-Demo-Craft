@@ -3,9 +3,14 @@ body{
     padding: 0;
 }
 
+
 /* .controls{
     border: 1px solid black;
 } */
+
+#control-games{
+    padding-top: 10px;
+}
 
 .controls .headings{
     padding-left: 40px;
@@ -23,44 +28,52 @@ body{
     margin-left: 5px;
     border-radius: 50%;
     background-color: white;
-    border: 1px solid #099ae4;
+    /* border: 1px solid #099ae4; */
+    border: 1px solid purple;
 }
 
 .controls .buttons button:hover{
-    background-color: #099ae4;
+    /* background-color: #099ae4; */
+    background-image: linear-gradient(to bottom right, purple, #FF0099, purple);
     color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
 
-#games{
+#games, #music{
     max-width: 95%;
-    height: 500px;
+    height: 400px;
     max-height: 800px;
     margin: 10px auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-#games::-webkit-scrollbar {
+#games::-webkit-scrollbar, #music::-webkit-scrollbar {
     display: none; /* hide the scrollbar in webkit browsers */
   }
   
-#games {
+#games, #music {
     -ms-overflow-style: none; /* hide the scrollbar in IE and Edge */
     scrollbar-width: none; /* hide the scrollbar in Firefox */
 }
 
-#games .row{
+#games .row, #music .row{
     display: flex;
     flex-wrap: nowrap;
     transition: transform 0.5s ease-in-out;
 }
 
-#games .card{
+#games .card, #music .card{
     margin: 10px;
     padding-top: 5px;
+    background-image: linear-gradient(to bottom right, purple, #FF0099, purple);
+}
+
+#games .card img, #music .card img{
+    padding-top: 10px;
+    border-radius: 20px;
 }
 
 /* #games .card:hover{
@@ -69,7 +82,22 @@ body{
     transform: scale(1.1);
 } */
 
-#games .card a.btn:hover{
+#games .card a.btn:hover, #music .card a.btn:hover{
     transition: transform 0.25s;
     transform: scale(1.1);
+    background-color: rgb(88, 1, 88);
+}
+
+#control-music h3 a{
+    text-decoration: none;
+    color: white;
+}
+
+#control-music h3 a:hover{
+    color: #099ae4;
+}
+
+a.btn{
+    background-color: purple;
+    border: #FF0099;
 }

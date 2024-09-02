@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Player Sample</title>
+        <script src="../javascript/jquery-3.7.1.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/1f06d62298.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../css/example01.css">
+        <link rel="stylesheet" type="text/css" href="../music/music-sample.css">
+    </head>
+
+    <body>
+        <div class="container-fluid" style="margin: 0; padding: 0;">
+            <div id="main-content">
+                <div id="header" style="margin: 0; padding: 0;"></div>
+                <div id="loading" class="bg-dark"></div>
+                <div id="content" class="bg-dark text-light">
+                    <div class="row" style="margin: 0;">
+                        <div class="col-lg-8" id="music-player">
+
+                            <!-- <div class="audio-player">
+                                <audio controls>
+                                    <source src="../assets/img/entertaiment/music/japanese/ambivalent-uru/The Apothecary Diaries  Opening 2 FULL Ambivalent by Uru Lyrics.mp3" type="audio/mp3">
+                                    
+                                </audio>
+                            </div> -->
+
+                            <div class="music-container" id="music-container">
+                                <div class="music-info">
+                                    <h4 id="title"></h4>
+                                    <div class="progress-container" id="progress-container">
+                                        <div class="progress" id="progress"></div>
+                                    </div>
+                                </div>
+                    
+                                <audio src="../assets/img/entertaiment/music/japanese/ambivalent-uru/The Apothecary Diaries  Opening 2 FULL Ambivalent by Uru Lyrics.mp3" id="audio"></audio>
+                    
+                                <div class="img-container">
+                                    <img src="../assets/img/entertaiment/music/japanese/ambivalent-uru/ambivalent.jfif" alt="music-cover" id="cover" />
+                                </div>
+                                <div class="navigation">
+                                    <!-- <button id="prev" class="action-btn">
+                                        <i class="fas fa-backward"></i>
+                                    </button> -->
+                                    <button id="play" class="action-btn action-btn-big">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <!-- <button id="next" class="action-btn">
+                                        <i class="fas fa-forward"></i>
+                                    </button> -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4" id="lyrics-holder">
+                            <div class="romaji">
+                                <h3>Lyrics</h3>
+                                [Intro] <br>
+                                Hey yeah <br>
+                                <br>
+                                [Verse 1] <br>
+                                Itsudatte kimi wa <br>
+                                Osore wo shirazu <br>
+                                Suki na mono ni <br>
+                                Muchuu na neko mitai de <br>
+                                <br>
+                                [Pre-Chorus] <br>
+                                Kimi ga mabushiku kanjiru no wa <br>
+                                Kitto boku ga kimi wo mitetakara <br>
+                                Shigekiteki na shikou kairo hikareteku <br>
+                                <br>
+                                [Chorus] <br>
+                                Aoi, aoi, sono hitomi ni boku wa mada utsuranai <br>
+                                Kimi wa kyou mo itsumo no kimi no mama <br>
+                                Yureru, yureru, kono kimochi wa dokoka ni shimatta mama <br>
+                                Ima wa koko de tada yokogao wo miteru <br>
+                                <br>
+                                [Verse 2] <br>
+                                Sui mo amai mo shitteru furi wo shite <br>
+                                Kata ni hamatta kyuukutsu na hibi no naka <br>
+                                <br>
+                                [Pre-Chorus] <br>
+                                Minareteita kono keshiki ni <br>
+                                Atarashii kaze ga fukikonda you na <br>
+                                Shigekiteki na sono sonzai hikareteku<br>
+                                <br>
+                                [Chorus] <br>
+                                Aoi, aoi, sono hitomi wa boku wo mada utsusanai <br>
+                                Konna ni mo sugu soba ni iru keredo <br>
+                                Mazariawanai futari no kyori itamu no wa boku dake <br>
+                                Ima wa koko de tada yokogao wo miteru <br>
+                                <br>
+                                [Bridge] <br>
+                                Nanika ni tsumazuita toki ni wa <br>
+                                Kimi nara dou suru ka na, nante omottari <br>
+                                Mou sukoshi yatte miyou nante sa <br>
+                                Omoetari surun da yo, okashii ne <br>
+                                Boku wa kizuiteru <br>
+                                <br>
+                                [Chorus] <br>
+                                Aoi, aoi, sono hitomi ni boku wa utsuranai kedo <br>
+                                Kimi wa itsumo waratteite hoshii <br>
+                                Suki na koto ni tokimeiteite <br>
+                                Sou, boku wa itsu datte <br>
+                                Kitto sono mama no kimi ga suki nan da <br>
+                            </div>
+                        </div>
+                        <div class="col-12" id="suggestion"></div>
+                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </body>
+
+    <footer>
+        <div id="footer" style="height: 15%;margin: 0;padding: 0;"></div>
+    </footer>
+
+
+    <script>
+        $(document).ready(function(){
+            $('#header').load('../header-footer/entertainment-header.html')
+            $('#sidebar-container').load('sidebar.html')
+            $('#footer').load("../header-footer/entertainment-footer.html")
+            $('#contacts').load('../html/contact.html')
+            $('#loading').load('../html/loading-01.html')
+
+            $(document).ajaxStart(function() {
+                document.getElementById("content").style.display = "none";
+                $("#loading").show();
+            });
+
+            $(document).ajaxComplete(function() {
+                setTimeout(function() {
+                    $("#loading").hide();
+                    document.getElementById("content").style.display = "block";
+                }, 2000);
+            });
+
+            $('a').on('click', function() {
+                $("#content").addClass("hide-content");
+                $("#loading").show();
+            });
+        });
+    </script>
+
+    <script src="../music/music.js"></script>
+
+    
+</html>

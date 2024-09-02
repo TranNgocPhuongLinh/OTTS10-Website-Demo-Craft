@@ -14,18 +14,19 @@
     <body>
         <div class="container-fluid" style="margin: 0; padding: 0;">
             <div id="main-content">
-                <div id="header" style="margin: 0; padding: 0;"></div>
-                <div id="loading"></div>
-                <div id="content">
-                    <div class="row" style="margin: 0; margin-top: 20px;">
+                <div id="header" style="margin: 0; padding: 0; font-family: 'Times New Roman', Times, serif;"></div>
+                <div id="loading" class="bg-dark"></div>
+                <div id="content" class="bg-dark text-light">
+                    <div class="row" style="margin: 0">
+                        <!--Game-->
                         <div class="controls col-lg-12 col-md-10 col-sm-8" id="control-games">
                             <div class="row">
                                 <div class="col-lg-9 col-md-7 col-sm-5 headings">
                                     <h3><i class="fa fa-gamepad" aria-hidden="true"></i> GAMES</h3>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-3 buttons">
-                                    <button id="scroll-left">«</button>
-                                    <button id="scroll-right">»</button>
+                                    <button id="scroll-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                    <button id="scroll-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -55,35 +56,54 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
-                                    <img src="..." class="card-img-top" alt="...">
+                               
+                            </div>
+                        </div>
+
+
+
+                        <!--Music-->
+                        <div class="controls col-lg-12 col-md-10 col-sm-8" id="control-music">
+                            <div class="row">
+                                <div class="col-lg-9 col-md-7 col-sm-5 headings">
+                                    <h3><a href="#">
+                                        <i class="fa fa-music" aria-hidden="true"></i> MUSIC
+                                    </a></h3>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 buttons">
+                                    <button id="music-scroll-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                    <button id="music-scroll-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-10 col-sm-8" id="music">
+                            <div class="row">
+                                <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
+                                    <img src="../assets/img/entertaiment/music/japanese/ambivalent-uru/ambivalent.jfif" class="card-img-top" alt="Liên quân Mobile">
                                     <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
+                                      <h5 class="card-title">Ambivalent</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted ">Singer: Uru</h6>
+                                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                      <a href="../music/ambivalent-uru.html" class="btn btn-primary"><i class="fa fa-play" aria-hidden="true"></i>
+                                        Phát
+                                      </a>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
+                                    <img src="../assets/img/entertaiment/roblox/logo.webp" class="card-img-top" alt="Roblox">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Roblox</h5>
                                       <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                       
-                                    </div>
-                                </div>
-
-                                <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                      b5
-                                    </div>
-                                </div>
-
-                                <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                      b5
+                                      <div class="event-cursor" style="cursor: not-allowed;">
+                                        <a href="#" class="btn btn-primary" style="pointer-events: none;">Chi tiết</a>
+                                      </div>
                                     </div>
                                 </div> -->
+
+                               
                             </div>
                         </div>
                     
@@ -102,11 +122,11 @@
 
     <script>
         $(document).ready(function(){
-            $('#header').load('../header-footer/header.html')
+            $('#header').load('../header-footer/entertainment-header.html')
             $('#sidebar-container').load('sidebar.html')
-            $('#footer').load("../header-footer/footer.html")
+            $('#footer').load("../header-footer/entertainment-footer.html")
             $('#contacts').load('../html/contact.html')
-            $('#loading').load('../html/loading.html')
+            $('#loading').load('../html/loading-01.html')
 
             $(document).ajaxStart(function() {
                 document.getElementById("content").style.display = "none";
@@ -121,16 +141,27 @@
             });
 
             const gamesDiv = document.getElementById('games');
+            const musicDiv = document.getElementById('music');
             const scrollLeftButton = document.getElementById('scroll-left');
             const scrollRightButton = document.getElementById('scroll-right');
+            const musicScrollLeftButton =document.getElementById('music-scroll-left');
+            const musicScrollRightButton = document.getElementById('music-scroll-right');
 
             scrollLeftButton.addEventListener('click', () => {
-            gamesDiv.scrollLeft -= 200; 
+                gamesDiv.scrollLeft -= 200; 
             });
 
             scrollRightButton.addEventListener('click', () => {
-            gamesDiv.scrollLeft += 200;
+                gamesDiv.scrollLeft += 200;
             });
+
+            musicScrollLeftButton.addEventListener('click', () => {
+                musicDiv.scrollLeft -= 200;
+            });
+
+            musicScrollRightButton.addEventListener('click', () =>{
+                musicDiv.scrollLeft += 200;
+            })
         });
     </script>
 

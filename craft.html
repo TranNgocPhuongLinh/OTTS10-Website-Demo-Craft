@@ -1,63 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giải trí</title>
+        <script src="../javascript/jquery-3.7.1.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/1f06d62298.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../css/example01.css">
+        <link rel="stylesheet" type="text/css" href="../entertainment/entertainment.css">
+    </head>
 
-<head>
-    <title>
-        How to show Page Loading div until
-        the page has finished loading?
-    </title>
+    <body>
+        <div class="container-fluid" style="margin: 0; padding: 0;">
+            <div id="main-content">
+                <div id="header" style="margin: 0; padding: 0; font-family: 'Times New Roman', Times, serif;"></div>
+                <div id="loading"></div>
+                <div id="content" class="bg-dark">
+                    <div class="row" style="margin: 0">
+                        <!--Game-->
+                        <div class="controls col-lg-12 col-md-10 col-sm-8" id="control-games">
+                            <div class="row">
+                                <div class="col-lg-9 col-md-7 col-sm-5 headings">
+                                    <h3><i class="fa fa-gamepad" aria-hidden="true"></i> GAMES</h3>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 buttons">
+                                    <button id="scroll-left">«</button>
+                                    <button id="scroll-right">»</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-10 col-sm-8" id="games">
+                            <div class="row">
+                                <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
+                                    <img src="../assets/img/entertaiment/arena_of_valor/logo.webp" class="card-img-top" alt="Liên quân Mobile">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Liên Quân Mobile</h5>
 
-    <style>
-        #loader {
-            border: 12px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 12px solid #444444;
-            width: 70px;
-            height: 70px;
-            animation: spin 1s linear infinite;
-        }
+                                      <!-- <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                      <a href="#" class="btn btn-primary">Chi tiết</a>
+                                    </div>
+                                </div>
 
-        .center {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
+                                <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
+                                    <img src="../assets/img/entertaiment/roblox/logo.webp" class="card-img-top" alt="Roblox">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Roblox</h5>
+                                      <!-- <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                      
+                                      <div class="event-cursor" style="cursor: not-allowed;">
+                                        <a href="#" class="btn btn-primary" style="pointer-events: none;">Chi tiết</a>
+                                      </div>
+                                    </div>
+                                </div>
 
-        @keyframes spin {
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-</head>
+                               
+                            </div>
+                        </div>
 
-<body>
-    <div id="loader" class="center"></div>
-    <h1>GeeksforGeeks</h1>
-    <h2>A computer science portal for geeks</h2>
 
-    <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20230723195619/GfG-Image.png" 
-        alt="GeeksforGeeks logo" />
+
+                        <!--Music-->
+                        <div class="controls col-lg-12 col-md-10 col-sm-8" id="control-music">
+                            <div class="row">
+                                <div class="col-lg-9 col-md-7 col-sm-5 headings">
+                                    <h3><a href="#">
+                                        <i class="fa fa-music" aria-hidden="true"></i> MUSIC
+                                    </a></h3>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 buttons">
+                                    <button id="music-scroll-left">«</button>
+                                    <button id="music-scroll-right">»</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-10 col-sm-8" id="music">
+                            <div class="row">
+                                <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
+                                    <img src="../assets/img/entertaiment/music/japanese/ambivalent.jfif" class="card-img-top" alt="Liên quân Mobile">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Ambivalent</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted ">Singer: Uru</h6>
+                                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                      <a href="#" class="btn btn-primary"><i class="fa fa-play" aria-hidden="true"></i>
+                                        Phát
+                                      </a>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="card col-lg-4 col-md-3 col-sm-2" style="width:18rem;">
+                                    <img src="../assets/img/entertaiment/roblox/logo.webp" class="card-img-top" alt="Roblox">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Roblox</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                      
+                                      <div class="event-cursor" style="cursor: not-allowed;">
+                                        <a href="#" class="btn btn-primary" style="pointer-events: none;">Chi tiết</a>
+                                      </div>
+                                    </div>
+                                </div> -->
+
+                               
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
         
-    <script>
-        document.onreadystatechange = function () {
-            if (document.readyState !== "complete") {
-                document.querySelector(
-                    "body").style.visibility = "hidden";
-                document.querySelector(
-                    "#loader").style.visibility = "visible";
-            } else {
-                document.querySelector(
-                    "#loader").style.display = "none";
-                document.querySelector(
-                    "body").style.visibility = "visible";
-            }
-        };
-    </script>
-</body>
+    </body>
 
+    <footer>
+        <div id="footer" style="height: 15%;margin: 0;padding: 0;"></div>
+    </footer>
+
+
+    <script>
+        $(document).ready(function(){
+            $('#header').load('../header-footer/entertainment-header.html')
+            $('#sidebar-container').load('sidebar.html')
+            $('#footer').load("../header-footer/entertainment-footer.html")
+            $('#contacts').load('../html/contact.html')
+            $('#loading').load('../html/loading.html')
+
+            $(document).ajaxStart(function() {
+                document.getElementById("content").style.display = "none";
+                $("#loading").show();
+            });
+
+            $(document).ajaxComplete(function() {
+                setTimeout(function() {
+                    $("#loading").hide();
+                    document.getElementById("content").style.display = "block";
+                }, 2000);
+            });
+
+            const gamesDiv = document.getElementById('games');
+            const musicDiv = document.getElementById('music');
+            const scrollLeftButton = document.getElementById('scroll-left');
+            const scrollRightButton = document.getElementById('scroll-right');
+            const musicScrollLeftButton =document.getElementById('music-scroll-left');
+            const musicScrollRightButton = document.getElementById('music-scroll-right');
+
+            scrollLeftButton.addEventListener('click', () => {
+                gamesDiv.scrollLeft -= 200; 
+            });
+
+            scrollRightButton.addEventListener('click', () => {
+                gamesDiv.scrollLeft += 200;
+            });
+
+            musicScrollLeftButton.addEventListener('click', () => {
+                musicDiv.scrollLeft -= 200;
+            });
+
+            musicScrollRightButton.addEventListener('click', () =>{
+                musicDiv.scrollLeft += 200;
+            })
+        });
+    </script>
+
+
+    
 </html>

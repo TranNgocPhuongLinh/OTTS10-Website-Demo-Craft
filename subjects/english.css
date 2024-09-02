@@ -101,6 +101,16 @@ body{
       position: absolute;
       left: 30%;
     }
+
+    .wrapper #structures #first-column{
+      margin-bottom: 0;
+      height: 252px;
+    }
+
+    .wrapper #structures #second-column{
+      margin-top: 0;
+    }
+
    }
  
 

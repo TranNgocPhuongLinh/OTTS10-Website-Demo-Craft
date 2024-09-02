@@ -1,5 +1,8 @@
 #return{
-    margin-top: 20px; margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 0;
+    width: 95%;
 }
 
 #return a i{
@@ -22,7 +25,7 @@
     border: 1px solid black;
     margin: 20px auto;
     height: fit-content;
-    padding: 0; padding-top: 10px;
+    padding-left: 10px; padding-top: 10px;
     font-size: 120%;
     width: 30%;
     position: -webkit-sticky;
@@ -48,6 +51,16 @@
 
 #table-of-content ol li.title{
     cursor: default;
+}
+
+#table-of-content ol li a{
+    text-decoration: none;
+    color: black;
+}
+
+#table-of-content ol li a:hover{
+    color: red;
+    text-decoration: underline;
 }
 
 #table-of-content ol li ol li a{
@@ -88,9 +101,23 @@
     font-weight: bold;
 }
 
+#main-view h4{
+    padding-left: 15px;
+}
+
 #main-view section{
     padding-left: 15px;
     font-size: 150%;
+}
+
+#main-view section table{
+    margin: 10px 30px;
+    font-size: 24px;
+}
+
+#main-view section table tr, #main-view section table td{
+    border: 1px solid black;
+    padding: 5px;
 }
 
 #main-view section .structures{
